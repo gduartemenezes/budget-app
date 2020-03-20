@@ -2,9 +2,9 @@
 
 export default class Input{
     constructor(data){
-        this.data = data;
-    }
-    get Results(){
-        const result = this.data;
+        this.type = data.type;
+        this.desc = data.desc;
+        this.value = data.value;
+
     }
 }
