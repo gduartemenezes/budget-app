@@ -1,0 +1,23 @@
+{
+  "name": "budget-app",
+  "version": "1.0.0",
+  "description": "budget-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gduartemenezes/budget-app.git"
+  },
+  "keywords": [
+    "es6",
+    "budget"
+  ],
+  "author": "Gustavo Duarte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gduartemenezes/budget-app/issues"
+  },
+  "homepage": "https://github.com/gduartemenezes/budget-app#readme"
+}
