@@ -1,13 +1,13 @@
 {
     "presets":[
         ["@babel/env",{
-            "useBuiltins: usage",
+            "useBuiltins": "usage",
             "corejs": "3",
             "targets": {
-                "browsers":{
+                "browsers":[
                     "last 5 versions",
                     "ie >= 8"
-                }
+                ]
             }
         }]
     ]
