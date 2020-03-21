@@ -1,14 +1,13 @@
 /* jshint esversion: 8 */
-import uniqid from 'uniqid';
 export default class Budget {
     constructor(){
         this.allData = [];
     }
 
-    addItem(type, desc, value){
+    addItem(id, type, desc, value){
       
         const item = {
-                    id : uniqid(),
+                    id,
                     type,
                     desc,
                     value
@@ -24,10 +23,10 @@ export default class Budget {
         this.allData.forEach(item =>{
             if(item.type === 'inc') {
             // sum all incomes
-            inc += item.value; 
+            inc += parseInt(item.value); 
             } else if(item.type === 'exp'){
             // sum all expenses
-            exp += item.value; 
+            exp += parseInt(item.value); 
             } else {
                 return -1;
             }
