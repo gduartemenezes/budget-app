@@ -9,3 +9,34 @@ export const getInput = () => {
     };
     return data;  
 };
+
+export const renderItem = item => {
+   console.log(item);
+    const markup = `
+        <div class="item clearfix" id="${item.type}-${item.id}">
+            <div class="item__description">${item.desc}</div>
+            <div class="right clearfix">
+                <div class="item__value">${item.value}</div>
+                <div class="item__delete">
+                <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+            </div>
+        </div>
+
+`;
+
+    if(item.type === 'inc'){
+        elements.incList.insertAdjacentHTML('beforeend', markup);
+    }else if(item.type === 'exp') {
+        elements.expList.insertAdjacentHTML('beforebegin', markup);
+    } else {
+        console.log('not rendering');
+    }
+
+};
+
+export const deleteItem = id => {
+    const el = document.getElementById(id);
+    el.parentNode.removeChild(el);
+};
+
+                       
