@@ -2,10 +2,10 @@
 import {elements} from './base';
 
 export const getInput = () => {
-    const item = {
+    const data = {
     type : elements.inputType.value,
     desc : elements.inputDesc.value,
     value : elements.inputValue.value
     };
-    
+    return data;  
 };

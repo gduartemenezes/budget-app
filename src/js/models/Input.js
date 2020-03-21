@@ -4,7 +4,6 @@ export default class Input{
     constructor(data){
         this.type = data.type;
         this.desc = data.desc;
-        this.value = data.value;
-
+        this.value = data.value;        
     }
 }
