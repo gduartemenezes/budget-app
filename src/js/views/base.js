@@ -10,6 +10,11 @@ export const elements = {
     budgetValue: document.querySelector('.budget__value'),
     incTotal: document.querySelector('.budget__income--value'),
     expTotal: document.querySelector('.budget__expenses--value'),
-    percentageTotal: document.querySelector('.budget__expenses--percentage')
+    percentageTotal: document.querySelector('.budget__expenses--percentage'),
+    monthLabel: document.querySelector('.budget__title--month')
 };
+
+export const month = ["January", "February", "March", "April", "May", "June",
+"July", "August", "September", "October", "November", "December"
+];
 

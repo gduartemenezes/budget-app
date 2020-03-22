@@ -3,7 +3,7 @@ import Input from './models/Input';
 import Budget from './models/Budget';
 import * as inputView from './views/inputView';
 import * as budgetView from './views/budgetView';
-import {elements} from './views/base';
+import {elements, month} from './views/base';
 
 
 
@@ -15,6 +15,7 @@ const initial = () => {
     elements.inputType.value = '';
     elements.inputDesc.value = '';
     elements.inputValue.value = '';
+    elements.monthLabel.textContent = `${month[new Date().getMonth()]}`;
 };
 const state = {};
 initial();
@@ -40,9 +41,10 @@ const controlBudget = () => {
     // calculate the current budget
     state.budget.calcBudget();
     console.log('my budget:'  + state.budget.budget);
-    // calc each exp percentage 
+    // calc each exp percentage
+    console.log(state.budget); 
+    //inputView.renderItem(state.budget.allData);
     
-
     //calc all exp percentage
 
 

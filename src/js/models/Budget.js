@@ -4,16 +4,30 @@ export default class Budget {
         this.allData = [];
     }
 
-    addItem(id, type, desc, value){
-      
-        const item = {
-                    id,
-                    type,
-                    desc,
-                    value
-                };
-        this.allData.push(item);
-        return item;
+    addItem(id, type, desc, value, percentage = 0){
+        if(type === 'inc'){
+            const item = {
+                id,
+                type,
+                desc,
+                value,
+                percentage
+            };
+
+            this.allData.push(item);
+            return item;
+        }else if(type === 'exp'){
+            const item = {
+                id,
+                type,
+                desc,
+                value,
+                percentage : (value/ this.incTotal) *100 
+            };
+            this.allData.push(item);
+            return item;
+        }
+        
 
     }
 
@@ -37,6 +51,8 @@ export default class Budget {
         this.expTotal = exp;
         if(inc > 0) {
             this.percentageTotal = ((exp / inc) * 100).toFixed(1);
+        } else{
+            this.percentageTotal = 0;
         }
     }
     deleteItem (id) {
@@ -44,11 +60,11 @@ export default class Budget {
         this.allData.splice(index, 1);
     }
 
-    calcPercentage (item) {
-        if(item.type === 'exp'){
-            this.item.percentage = parseFloat(this.item.value / this.incTotal); 
-        }
-        
-    }
+   calcPercentage() {
+       if(type === 'exp'){
+           let perc = (value / this.incTotal)*100;
+           return perc;
+       }
+   } 
     
 }
