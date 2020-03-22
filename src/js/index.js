@@ -41,9 +41,12 @@ const controlBudget = () => {
     state.budget.calcBudget();
     console.log('my budget:'  + state.budget.budget);
     // calc each exp percentage 
-    budgetView.renderBudget(state.budget);
+    
 
     //calc all exp percentage
+
+
+    budgetView.renderBudget(state.budget);
 };
 
 
@@ -71,7 +74,7 @@ elements.listContainer.addEventListener('click', e =>{
 
     // Update the Budget UI and Data Structure
     state.budget.calcBudget();
-    
+    budgetView.renderBudget(state.budget);
 
     
 });

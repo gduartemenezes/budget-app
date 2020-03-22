@@ -6,6 +6,7 @@ export const renderBudget = item => {
     elements.budgetValue.textContent = item.budget;
     elements.incTotal.textContent =  item.incTotal;
     elements.expTotal.textContent = item.expTotal;
+    elements.percentageTotal.textContent = `${item.percentageTotal} %`;
 
 };
 

@@ -23,21 +23,32 @@ export default class Budget {
         this.allData.forEach(item =>{
             if(item.type === 'inc') {
             // sum all incomes
-            inc += parseInt(item.value); 
+            inc += parseFloat(item.value); 
             } else if(item.type === 'exp'){
             // sum all expenses
-            exp += parseInt(item.value); 
+            exp += parseFloat(item.value); 
             } else {
                 return -1;
             }
         });
         // calculate the current budget
-        this.budget = inc - exp;
+        this.budget = (inc - exp).toFixed(2);
         this.incTotal = inc;
         this.expTotal = exp;
+        if(inc > 0) {
+            this.percentageTotal = ((exp / inc) * 100).toFixed(1);
+        }
     }
     deleteItem (id) {
         const index = this.allData.findIndex(el => el.id === id);
         this.allData.splice(index, 1);
     }
+
+    calcPercentage (item) {
+        if(item.type === 'exp'){
+            this.item.percentage = parseFloat(this.item.value / this.incTotal); 
+        }
+        
+    }
+    
 }
