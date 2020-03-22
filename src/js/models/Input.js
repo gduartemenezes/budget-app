@@ -7,4 +7,6 @@ export default class Input{
         this.desc = data.desc;
         this.value = data.value;        
     }
+
+    
 }

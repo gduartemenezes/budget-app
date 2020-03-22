@@ -1,6 +1,7 @@
 /* jshint esversion: 8*/ 
 import {elements} from './base';
 
+
 export const getInput = () => {
     const data = {
     type : elements.inputType.value,
@@ -37,6 +38,6 @@ export const renderItem = item => {
 export const deleteItem = id => {
     const el = document.getElementById(id);
     el.parentNode.removeChild(el);
-};
+}; 
 
                        
