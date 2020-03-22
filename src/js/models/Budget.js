@@ -33,5 +33,11 @@ export default class Budget {
         });
         // calculate the current budget
         this.budget = inc - exp;
+        this.incTotal = inc;
+        this.expTotal = exp;
+    }
+    deleteItem (id) {
+        const index = this.allData.findIndex(el => el.id === id);
+        this.allData.splice(index, 1);
     }
 }
